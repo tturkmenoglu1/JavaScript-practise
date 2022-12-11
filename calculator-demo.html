@@ -18,28 +18,62 @@
     <input type="number" id="sum1">
     <span class="sign">+</span>
     <input type="number" id="sum2">
-    <button>Sum</button>
+    <span class="sign">=</span>
+    <h1 id="resultSum"></h1>
+    <button onclick="sumNums()">Sum</button>
 
 <br>
     <input type="number" id="sub1">
     <span class="sign">-</span>
     <input type="number" id="sub2">
-    <button>Subtract</button>
+    <button onclick="subNums()">Subtract</button>
 <br>
     <input type="number" id="mult1">
     <span class="sign">x</span>
     <input type="number" id="mult2">
-    <button>Multiply</button>
+    <button onclick="multiplyNums()">Multiply</button>
 <br>
     <input type="number" id="div1">
     <span class="sign">/</span>
     <input type="number" id="div2">
-    <button>Divison</button>
+    <button onclick="divNums()">Divison</button>
 
     <script>
+        function sumNums(){
         const num1 = document.querySelector("#sum1");
         const num2 = document.querySelector("#sum2");
+        const result = document.querySelector("#resultSum");
 
+        const sum = Number(num1.value) + Number(num2.value);
+        result.innerText = sum;
+        }
+
+        function subNums(){
+        const num1 = document.querySelector("#sub1");
+        const num2 = document.querySelector("#sub2");
+        const result = document.querySelector("#resultSum");
+
+        const sub = Number(num1.value) - Number(num2.value);
+        result.innerText = sub;
+        }
+
+        function multiplyNums(){
+        const num1 = document.querySelector("#mult1");
+        const num2 = document.querySelector("#mult2");
+        const result = document.querySelector("#resultSum");
+
+        const multiply = Number(num1.value) * Number(num2.value);
+        result.innerText = multiply;
+        }
+
+        function divNums(){
+        const num1 = document.querySelector("#div1");
+        const num2 = document.querySelector("#div2");
+        const result = document.querySelector("#resultSum");
+
+        const div = Number(num1.value) / Number(num2.value);
+        result.innerText = div;
+        }
     </script>
 </body>
 </html>
