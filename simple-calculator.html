@@ -13,10 +13,8 @@
     </style>
 </head>
 <body>
-    <input type="number" id="num1">
-    <span class="sign">+</span>
-    <input type="number" id="num1">
-    <span class="sign">=</span>
+    <input type="number" id="num1">  <span class="sign">+</span>
+    <input type="number" id="num2">  <span class="sign">=</span> 
     <span id="result"></span>
     <br>
     <button onclick="sumNums()">Sum</button>
@@ -26,31 +24,33 @@
     <button onclick="reset()">Reset</button>
 
     <script>
-        const num1 = document.querySelector("#num1");
-        const num2 = document.querySelector("#num2");
+        let num1 = document.querySelector("#num1");
+        let num2 = document.querySelector("#num2");
         const result = document.querySelector("#result");
 
         function sumNums(){
-        const sum = Number(num1.value) + Number(num2.value);
-        result.innerText = sum;
+            const sum = Number(num1.value) + Number(num2.value);
+            result.innerText = sum;
         }
 
         function subNums(){
-        const sub = Number(num1.value) - Number(num2.value);
-        result.innerText = sub;
+            const sub = Number(num1.value) - Number(num2.value);
+            result.innerText = sub;
         }
 
         function multiplyNums(){
-        const multiply = Number(num1.value) * Number(num2.value);
-        result.innerText = multiply;
+            const multiply = Number(num1.value) * Number(num2.value);
+            result.innerText = multiply;
         }
 
         function divNums(){
-        const div = Number(num1.value) / Number(num2.value);
-        result.innerText = div;
+            const div = Number(num1.value) / Number(num2.value);
+            result.innerText = div;
         }
 
         function reset(){
+            num1.innerText = "";
+            num2.innerText = "";
             result.innerText = "";
         }
     </script>
