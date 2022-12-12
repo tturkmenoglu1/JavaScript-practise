@@ -13,7 +13,7 @@
     </style>
 </head>
 <body>
-    <input type="number" id="num1">  <span class="sign">+</span>
+    <input type="number" id="num1">  <span id="opSign">+</span>
     <input type="number" id="num2">  <span class="sign">=</span> 
     <span id="result"></span>
     <br>
@@ -21,38 +21,37 @@
     <button onclick="subNums()">Subtract</button>
     <button onclick="multiplyNums()">Multiply</button>
     <button onclick="divNums()">Divison</button>
-    <button onclick="reset()">Reset</button>
 
     <script>
         let num1 = document.querySelector("#num1");
         let num2 = document.querySelector("#num2");
         const result = document.querySelector("#result");
+        const operator = document.querySelector("#opSign")
 
         function sumNums(){
             const sum = Number(num1.value) + Number(num2.value);
             result.innerText = sum;
+            operator.innerText= "+";
         }
 
         function subNums(){
             const sub = Number(num1.value) - Number(num2.value);
             result.innerText = sub;
+            operator.innerText= "-";
         }
 
         function multiplyNums(){
             const multiply = Number(num1.value) * Number(num2.value);
             result.innerText = multiply;
+            operator.innerText= "*";
         }
 
         function divNums(){
             const div = Number(num1.value) / Number(num2.value);
             result.innerText = div;
+            operator.innerText= "/";
         }
 
-        function reset(){
-            num1.innerText = "";
-            num2.innerText = "";
-            result.innerText = "";
-        }
     </script>
 </body>
 </html>
