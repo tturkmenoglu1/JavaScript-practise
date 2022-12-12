@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            font-size: 1.5rem;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="number" id="sum1">
+    <span class="sign">+</span>
+    <input type="number" id="sum2">
+    <span class="sign">=</span>
+    <span id="result"></span>
+    <br>
+    <button onclick="sumNums()">Sum</button>
+    <button onclick="subNums()">Subtract</button>
+    <button onclick="multiplyNums()">Multiply</button>
+    <button onclick="divNums()">Divison</button>
+    <button onclick="reset()">Reset</button>
+
+    <script>
+        function sumNums(){
+        const num1 = document.querySelector("#sum1");
+        const num2 = document.querySelector("#sum2");
+        const result = document.querySelector("#resultSum");
+
+        const sum = Number(num1.value) + Number(num2.value);
+        result.innerText = sum;
+        }
+
+        function subNums(){
+        const num1 = document.querySelector("#sub1");
+        const num2 = document.querySelector("#sub2");
+        const result = document.querySelector("#resultSub");
+
+        const sub = Number(num1.value) - Number(num2.value);
+        result.innerText = sub;
+        }
+
+        function multiplyNums(){
+        const num1 = document.querySelector("#mult1");
+        const num2 = document.querySelector("#mult2");
+        const result = document.querySelector("#resultMult");
+
+        const multiply = Number(num1.value) * Number(num2.value);
+        result.innerText = multiply;
+        }
+
+        function divNums(){
+        const num1 = document.querySelector("#div1");
+        const num2 = document.querySelector("#div2");
+        const result = document.querySelector("#resultDiv");
+
+        const div = Number(num1.value) / Number(num2.value);
+        result.innerText = div;
+        }
+    </script>
+</body>
+</html>
