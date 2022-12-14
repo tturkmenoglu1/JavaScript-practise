@@ -7,26 +7,23 @@
     <title>Document</title>
   </head>
   <body>
-<!--     <input type="number" id="palindrome" />
-    <input type="button" value="Check" onclick="isPalindrome()" />
-
-    --> 
 
     <script>
         const number = prompt('Enter a string or number: ');  
         const value = isPalindrome(number);  
 
-      function isPalindrome() {
-        let num = document.querySelector("#palindrome").value;
-        let number = Number(num)
+      function isPalindrome(number) {
 
-        for (let i = 0; i < number / 2; i++) {
-          if (number[i] !== number[len - 1 - i]) {
-            alert("It is not a palindrome");
+        const len = number.length;  
+      
+      for (let i = 0; i < len / 2; i++) {  
+    
+          if (number[i] !== number[len - 1 - i]) {  
+              alert( 'It is not a palindrome');  
           }
-        }
-        alert("It is a palindrome");
-      }
+      }  
+      alert( 'It is a palindrome');  
+  }  
     </script>
   </body>
 </html>
