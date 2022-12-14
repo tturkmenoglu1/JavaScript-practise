@@ -16,6 +16,12 @@
         const val = document.querySelector("#input").value;
         value = isPalindrome(val);
 
+        if (value) {
+            alert( 'The input is a palindrome');
+        }
+        else{
+            alert( 'The input is not a palindrome');
+        }
       }
 
       function isPalindrome(number) {
@@ -25,12 +31,14 @@
       for (let i = 0; i < len / 2; i++) {  
     
           if (number[i] !== number[len - 1 - i]) {  
-              alert( 'The input is not a palindrome');
-              break;  
+              return false; 
           }
       }  
-      alert( 'The input is a palindrome');  
-  }  
+      return true;
+      }  
+
+      
+
     </script>
   </body>
 </html>
