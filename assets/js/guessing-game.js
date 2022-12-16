@@ -24,7 +24,8 @@ const start = () => {
 const reset = () => {
     btnGuess.style.display = "none";
     btnStart.innerHTML = "Start Game";
-    numEl.setAttribute("disabled","true");
+    numEl.setAttribute("disabled", "true");
+    leftGuesses = 3;
 }
 
 const guess = () =>{
@@ -43,14 +44,16 @@ const guess = () =>{
         else if(num > randomNumber){
             labelEl.innerHTML = "Your number is greater than the random number";
             leftGuesses--;
+            guesses.innerHTML = `you have ${leftGuesses} guesses left`;
         }
         else{
             labelEl.innerHTML = "Your number is lesser than the random number";
             leftGuesses--;
+            guesses.innerHTML = `you have ${leftGuesses} guesses left`;
         }
     }
     else {
-        
+        guesses.innerHTML = `You have no guesses left`;
     }
     
     numEl.value="";
