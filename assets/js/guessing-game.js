@@ -4,10 +4,13 @@ const btnGuess = document.querySelector(".btn-guess");
 const btnStart = document.querySelector(".btn-start");
 const numEl = document.querySelector("#txtNumber");
 const labelEl = document.querySelector("#lblResult");
+const guesses = document.querySelector("#guessLeft");
 
 const minRandomNumber = 1;
 const maxRAndomNumber = 100;
 const totalShot = 5;
+
+let leftGuesses = 3;
 
 const start = () => {
     randomNumber = generateRandomNumber(minRandomNumber,maxRAndomNumber);
@@ -32,16 +35,24 @@ const guess = () =>{
         num = 0;
     }
     */
-    if(num === randomNumber){
-        labelEl.innerHTML = "Congrats! You guessed the number";
-        reset();
+    if (leftGuesses>0) {
+        if(num === randomNumber){
+            labelEl.innerHTML = "Congrats! You guessed the number";
+            reset();
+        }
+        else if(num > randomNumber){
+            labelEl.innerHTML = "Your number is greater than the random number";
+            leftGuesses--;
+        }
+        else{
+            labelEl.innerHTML = "Your number is lesser than the random number";
+            leftGuesses--;
+        }
     }
-    else if(num > randomNumber){
-        labelEl.innerHTML = "Your number is greater than the random number";
+    else {
+        
     }
-    else{
-        labelEl.innerHTML = "Your number is lesser than the random number";
-    }
+    
     numEl.value="";
     numEl.focus();
 }
