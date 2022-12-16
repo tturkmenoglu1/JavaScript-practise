@@ -10,7 +10,7 @@ const minRandomNumber = 1;
 const maxRAndomNumber = 100;
 const totalShot = 5;
 
-let leftGuesses = 3;
+let leftGuesses = 5;
 
 const start = () => {
     randomNumber = generateRandomNumber(minRandomNumber,maxRAndomNumber);
@@ -19,12 +19,17 @@ const start = () => {
     labelEl.innerHTML = "";
     numEl.removeAttribute("disabled");
     numEl.focus();
+
+    guesses.innerHTML = `you have ${leftGuesses} guesses left`;
+    guesses.style.display = "inline";
 }
 
 const reset = () => {
     btnGuess.style.display = "none";
     btnStart.innerHTML = "Start Game";
     numEl.setAttribute("disabled", "true");
+
+    guesses.style.display = "none";
     leftGuesses = 3;
 }
 
