@@ -77,7 +77,7 @@ const generateRandomNumber = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
-const guessHint = (leftGuesses) => {
+const guessHint = () => {
     if (randomNumber%2==0) {
         hint.innerHTML = "Hint: The number is even";
     } else {
