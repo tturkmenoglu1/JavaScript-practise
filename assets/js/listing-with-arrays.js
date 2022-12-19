@@ -12,30 +12,24 @@ const mixBtn = document.querySelector("#mix");
 const list = document.querySelector(".listing");
 
 
-
+ 
 add.addEventListener("click", () => {
-    getList;
-
     !input.value && alert("Input cannot be blank");
 
     element = input.value;
 
-    listing.push(element)
-
-    for (const li of listing) {
-        list.innerHTML = `<li>${li}</li>`;;
-    }
-
-    /* elements += `<li>${input.value}</li>`; */
+    list.innerHTML += `<li>${element}</li>`;
 
 });
 
 sort.addEventListener("click", () => {
-    let lis = "";
-    for (const li of list) {
-        lis += li;
+    alert("ok")
+    let toSort = getList();
+    toSort.sort();
+    for (const el of toSort) {
+        list.innerHTML += `<li>${el}</li>`;
     }
-    console.log(lis)
+
 });
 
 
@@ -64,11 +58,12 @@ mix.addEventListener("click", () => {
 });
 
 const getList = () => {
-    let listing = list.childNodes.TextNode;
-    for(let i=0;i < listing.length; i++) {
-    let listEl = listing[i];
+    let listEl = [];
+    let ulist = list.childNodes.TextNode;
+    for(let i=0;i < ulist.length; i++) {
+     listEl += ulist[i];
     alert(listEl);
-}
-}
+
+}}
 
 
