@@ -11,11 +11,10 @@ const mixBtn = document.querySelector("#mix");
 
 const list = document.querySelector(".listing");
 
-listing = [];
-
 
 
 add.addEventListener("click", () => {
+    getList;
 
     !input.value && alert("Input cannot be blank");
 
@@ -65,14 +64,11 @@ mix.addEventListener("click", () => {
 });
 
 const getList = () => {
-    var LIs = document.getElementById('list').childNodes;
-    var listvar = [];
-    for (var i = 0; i < LIs.length; ++i) {
-        var LI = LIs[i];
-        list.push(LI.innerText || LI.textContent);
-    }
-
-    return listvar;
+    let listing = list.childNodes.TextNode;
+    for(let i=0;i < listing.length; i++) {
+    let listEl = listing[i];
+    alert(listEl);
+}
 }
 
 
