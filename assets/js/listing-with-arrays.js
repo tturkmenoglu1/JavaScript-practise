@@ -13,6 +13,8 @@ const list = document.querySelector(".listing");
 
 listing = [];
 
+
+
 add.addEventListener("click", () => {
 
     !input.value && alert("Input cannot be blank");
@@ -56,8 +58,21 @@ removeL.addEventListener("click", () => {
 removeA.addEventListener("click", () => {
 
 });
+
+
 mix.addEventListener("click", () => {
 
 });
+
+const getList = () => {
+    var LIs = document.getElementById('list').childNodes;
+    var listvar = [];
+    for (var i = 0; i < LIs.length; ++i) {
+        var LI = LIs[i];
+        list.push(LI.innerText || LI.textContent);
+    }
+
+    return listvar;
+}
 
 
