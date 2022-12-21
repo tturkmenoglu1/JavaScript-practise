@@ -23,7 +23,10 @@ addBtn.addEventListener("click", () => {
 sort.addEventListener("click", () => {
     let toSort = getList();
     toSort.sort();
-    console.log(toSort)
+    list.innerHTML = "";
+    for (const element of toSort) {
+        list.innerHTML += `<li>${element}</li>`;
+    }
 
 });
 
