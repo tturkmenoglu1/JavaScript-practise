@@ -27,27 +27,41 @@ sort.addEventListener("click", () => {
     for (const element of toSort) {
         list.innerHTML += `<li>${element}</li>`;
     }
-
 });
 
 
 reverse.addEventListener("click", () => {
-
+    let toSort = getList();
+    toSort.reverse();
+    list.innerHTML = "";
+    for (const element of toSort) {
+        list.innerHTML += `<li>${element}</li>`;
+    }
 });
 
 
 removeF.addEventListener("click", () => {
-
+    let toSort = getList();
+    toSort.shift();
+    list.innerHTML = "";
+    for (const element of toSort) {
+        list.innerHTML += `<li>${element}</li>`;
+    }
 });
 
 
 removeL.addEventListener("click", () => {
-
+    let toSort = getList();
+    toSort.pop();
+    list.innerHTML = "";
+    for (const element of toSort) {
+        list.innerHTML += `<li>${element}</li>`;
+    }
 });
 
 
 removeA.addEventListener("click", () => {
-
+    list.innerHTML = "";
 });
 
 
