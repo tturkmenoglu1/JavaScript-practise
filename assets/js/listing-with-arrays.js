@@ -68,11 +68,19 @@ removeA.addEventListener("click", () => {
 mix.addEventListener("click", () => {
     let listEl = getList();
     let toMix = [];
-    let rnd = Math.random * listEl.length
-    list.innerHTML = "";
-    for (let i = 0; i < listEl.length; i++) {
+    let len = listEl.length;
+    let rnd;
+
+    rnd = Math.floor(Math.random() * (len));
+    console.log(rnd)
+
+    for (let i = 0; i < len; i++) {
+        console.log(rnd)
         toMix.push(listEl[rnd])
     }
+
+    
+    list.innerHTML = "";
     for (const element of toMix) {
         list.innerHTML += `<li>${element}</li>`;
     }
