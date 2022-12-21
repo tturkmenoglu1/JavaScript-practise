@@ -31,30 +31,30 @@ sort.addEventListener("click", () => {
 
 
 reverse.addEventListener("click", () => {
-    let toSort = getList();
-    toSort.reverse();
+    let toRev = getList();
+    toRev.reverse();
     list.innerHTML = "";
-    for (const element of toSort) {
+    for (const element of toRev) {
         list.innerHTML += `<li>${element}</li>`;
     }
 });
 
 
 removeF.addEventListener("click", () => {
-    let toSort = getList();
-    toSort.shift();
+    let toDel = getList();
+    toDel.shift();
     list.innerHTML = "";
-    for (const element of toSort) {
+    for (const element of toDel) {
         list.innerHTML += `<li>${element}</li>`;
     }
 });
 
 
 removeL.addEventListener("click", () => {
-    let toSort = getList();
-    toSort.pop();
+    let toDel = getList();
+    toDel.pop();
     list.innerHTML = "";
-    for (const element of toSort) {
+    for (const element of toDel) {
         list.innerHTML += `<li>${element}</li>`;
     }
 });
