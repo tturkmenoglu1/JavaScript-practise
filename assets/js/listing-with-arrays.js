@@ -13,7 +13,7 @@ const list = document.querySelector(".listing");
 
 
  
-add.addEventListener("click", () => {
+addBtn.addEventListener("click", () => {
     !input.value && alert("Input cannot be blank");
 
     element = input.value;
@@ -25,10 +25,7 @@ add.addEventListener("click", () => {
 sort.addEventListener("click", () => {
     alert("ok")
     let toSort = getList();
-    toSort.sort();
-    for (const el of toSort) {
-        list.innerHTML += `<li>${el}</li>`;
-    }
+    console.log(toSort)
 
 });
 
@@ -59,11 +56,12 @@ mix.addEventListener("click", () => {
 
 const getList = () => {
     let listEl = [];
-    let ulist = list.childNodes.TextNode;
-    for(let i=0;i < ulist.length; i++) {
-     listEl += ulist[i];
-    alert(listEl);
+    let ulist = document.querySelectorAll(".listing li");
+    for (let i = 0; i < ulist.length; i++) {
+        listEl += ulist[i].outerText;
+    }
+    return listEl;
 
-}}
+}
 
 
