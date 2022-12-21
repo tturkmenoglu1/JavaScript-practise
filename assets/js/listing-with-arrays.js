@@ -10,8 +10,6 @@ const removeA = document.querySelector("#removeA");
 const mixBtn = document.querySelector("#mix");
 
 const list = document.querySelector(".listing");
-
-
  
 addBtn.addEventListener("click", () => {
     !input.value && alert("Input cannot be blank");
@@ -23,8 +21,8 @@ addBtn.addEventListener("click", () => {
 });
 
 sort.addEventListener("click", () => {
-    alert("ok")
     let toSort = getList();
+    toSort.sort();
     console.log(toSort)
 
 });
@@ -57,8 +55,9 @@ mix.addEventListener("click", () => {
 const getList = () => {
     let listEl = [];
     let ulist = document.querySelectorAll(".listing li");
+    /* console.log(ulist) */
     for (let i = 0; i < ulist.length; i++) {
-        listEl += ulist[i].outerText;
+        listEl.push(ulist[i].outerText);
     }
     return listEl;
 
