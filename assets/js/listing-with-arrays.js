@@ -75,10 +75,13 @@ mix.addEventListener("click", () => {
     console.log(rnd)
 
     for (let i = 0; i < len; i++) {
+        rnd = Math.floor(Math.random() * (len));
         console.log(rnd)
+        console.log(rnd)
+        rnd = Math.floor(Math.random() * (len));
         toMix.push(listEl[rnd])
     }
-
+    console.log(toMix)
     
     list.innerHTML = "";
     for (const element of toMix) {
@@ -86,6 +89,32 @@ mix.addEventListener("click", () => {
     }
 
 });
+
+
+mix.addEventListener("click", () => {
+    let listEl = getList();
+    let toMix = [];
+    let len = listEl.length;
+    let rnd;
+
+    while (!toMix.length === listEl) {
+        rnd = Math.floor(Math.random() * (len));
+        console.log(rnd)
+        if (!toMix.includes[listEl[rnd]]) {
+            toMix.push(listEl[rnd])
+        }
+    }
+    list.innerHTML = "";
+    for (const element of toMix) {
+        list.innerHTML += `<li>${element}</li>`;
+    }
+});
+
+
+
+
+
+
 
 const getList = () => {
     let listEl = [];
