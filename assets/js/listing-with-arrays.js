@@ -65,52 +65,31 @@ removeA.addEventListener("click", () => {
 });
 
 
-/* mix.addEventListener("click", () => {
-    let listEl = getList();
-    let toMix = [];
-    let len = listEl.length;
-    let rnd;
-
-    rnd = Math.floor(Math.random() * (len));
-    console.log(rnd)
-
-    for (let i = 0; i < len; i++) {
-        rnd = Math.floor(Math.random() * (len));
-        console.log(rnd)
-        console.log(rnd)
-        rnd = Math.floor(Math.random() * (len));
-        toMix.push(listEl[rnd])
-    }
-    console.log(toMix)
-    
-    list.innerHTML = "";
-    for (const element of toMix) {
-        list.innerHTML += `<li>${element}</li>`;
-    }
-
-}); */
-
-
 mix.addEventListener("click", () => {
     let listEl = getList();
     let toMix = [];
     let len = listEl.length;
-    let rnd;
+    
 
-    while (!toMix.length == len) {
-        alert("ok")
-        rnd = Math.floor(Math.random() * (len -1+1))+1;
+    while (true) {
+        let rnd = Math.floor(Math.random() * (len));
         console.log(rnd)
         let x = listEl[rnd];
-        if (!toMix.includes[x]) {
+        if (!toMix.includes(x)) {
             toMix.push(x)
         }
+
+        if (toMix.length == len) {
+            break;
+        }
+        
     }
     console.log(toMix)
     list.innerHTML = "";
     for (const element of toMix) {
         list.innerHTML += `<li>${element}</li>`;
-    }
+    }   
+    
 });
 
 
