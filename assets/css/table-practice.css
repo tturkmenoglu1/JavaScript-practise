@@ -16,7 +16,7 @@
 }
 
 .table tbody td:last-child div{
-    display: flex;
+    text-align: center;
 }
 
 div.addNew{
