@@ -1,9 +1,49 @@
 
 .table {
-    width: 30%;
+    width: 40%;
+}
+
+.table th:nth-child(2){
+    width: 50%;
 }
 
 .table td,th{
-    border: 1px solid white;
+    border: 2px solid white;
+}
+
+.table tbody td:last-child{
+    width: 10%;
+}
+
+.table tbody td:last-child div{
+    display: flex;
+}
+
+div.addNew{
+    width: 40%;
+    margin-bottom: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+div input{
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid gray;
+}
+
+div input.name{
+    width: 55%;
+}
+
+div input.point{
+    width: 19%;
+}
+
+div button{
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    width: 20%;
 }
 
