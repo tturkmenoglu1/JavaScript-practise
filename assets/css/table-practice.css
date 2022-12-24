@@ -19,6 +19,13 @@
     text-align: center;
 }
 
+
+
+
+
+
+
+
 div.addNew{
     width: 40%;
     margin-bottom: 0.8rem;
@@ -33,7 +40,7 @@ div input{
 }
 
 div input.name{
-    width: 55%;
+    width: 55;
 }
 
 div input.point{
