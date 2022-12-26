@@ -5,6 +5,7 @@ const addBtn = document.querySelector("#addBtn")
 const tbody = document.querySelector(".tbody")
 
 addBtn.addEventListener("click", () => {
+    alert("ok")
     let newName = nameIn.value;
     let newPoint = pointIn.value;
     let newStudent = `

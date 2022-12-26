@@ -33,7 +33,7 @@ div.addNew input{
     border: 1px solid gray;
 }
 
-div.addNew button{
+div.addNew button.addBtn{
     border: none;
     border-radius: 0.4rem;
     padding: 0.5rem 1rem;
