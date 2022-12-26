@@ -20,37 +20,31 @@
 }
 
 
-
-
-
-
-
-
 div.addNew{
     width: 40%;
-    margin-bottom: 0.8rem;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 0.7rem;
 }
 
 div.addNew input{
-    border-radius: 0.5rem;
+    border-radius: 0.4rem;
     padding: 0.5rem 1rem;
     border: 1px solid gray;
 }
 
-div.addNew input.name{
-    width: 55;
-}
-
-div.addNew input.point{
-    width: 19%;
-}
-
-div button{
+div.addNew button{
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 0.4rem;
     padding: 0.5rem 1rem;
+}
+
+div.addNew input#name{
+    width: 60%;
+}
+
+div.addNew input#point{
     width: 20%;
 }
+
 
