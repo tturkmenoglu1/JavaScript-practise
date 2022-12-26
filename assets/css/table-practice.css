@@ -4,7 +4,7 @@
 }
 
 .table th:nth-child(2){
-    width: 50%;
+    width: 60%;
 }
 
 .table td,th{
@@ -23,9 +23,33 @@
     border: none;
 }
 
+.table .pointV{
+    text-align: center;
+}
 
 
 
+
+
+/* TABLE FOOT */
+
+.table tfoot{
+    background-color: rgb(224, 224, 224);
+}
+
+.table tfoot td:first-child{
+    text-align: right;
+}
+
+.table tfoot td:nth-child(2){
+    text-align: center;
+}
+
+
+
+
+
+/* NAME POINT AND ADD BUTTON */
 
 
 div.addNew{
@@ -48,11 +72,11 @@ div.addNew button#addBtn{
 }
 
 div.addNew input#name{
-    width: 60%;
+    width: 64%;
 }
 
 div.addNew input#point{
-    width: 20%;
+    width: 16%;
 }
 
 

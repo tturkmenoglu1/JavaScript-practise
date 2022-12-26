@@ -9,12 +9,12 @@ addBtn.addEventListener("click", () => {
     let newPoint = pointIn.value;
     let newStudent = `
     <tr>
-     <th scope="row">1</th>
-     <td>${newName}</td>
-     <td>${newPoint}</td>
+     <th class="idV" scope="row">1</th>
+     <td class="nameV">${newName}</td>
+     <td class="pointV">${newPoint}</td>
      <td>
-       <div>
-         <button class="edit"><i class="fa-solid fa-pen"></i></button>
+       <div class="edit">
+         <button class="update"><i class="fa-solid fa-pen"></i></button>
          <button class="delete"><i class="fa-solid fa-trash-can"></i></button>
        </div>
      </td>
