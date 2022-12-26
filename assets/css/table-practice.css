@@ -19,6 +19,14 @@
     text-align: center;
 }
 
+.table td div.edit button{
+    border: none;
+}
+
+
+
+
+
 
 div.addNew{
     width: 40%;
@@ -33,7 +41,7 @@ div.addNew input{
     border: 1px solid gray;
 }
 
-div.addNew button.addBtn{
+div.addNew button#addBtn{
     border: none;
     border-radius: 0.4rem;
     padding: 0.5rem 1rem;
