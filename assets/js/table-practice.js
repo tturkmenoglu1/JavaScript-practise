@@ -4,6 +4,10 @@ const pointIn = document.querySelector("#point")
 const addBtn = document.querySelector("#addBtn")
 const tbody = document.querySelector(".tbody")
 
+const idGen = () => {
+  
+}
+
 addBtn.addEventListener("click", () => {
     let newName = nameIn.value;
     let newPoint = pointIn.value;

@@ -7,6 +7,10 @@
     width: 60%;
 }
 
+.table th:last-child{
+    width: 15%;
+}
+
 .table td,th{
     border: 2px solid white;
 }
