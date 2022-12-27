@@ -68,16 +68,21 @@ updateBtn.addEventListener("click", (e) => {
   nameUpdate.innerHTML = `<input id="updateName" type="text">`
   pointUpdate.innerHTML = `<input id="updatePoint" type="text">`
 
+  const updatedN = document.querySelector("#updateName")
+  const updatedP = document.querySelector("#updatePoint")
+
   updateBtn.addEventListener("click", () => {
     if (nameUpdate && pointUpdate) {
-      nameIn.innerText = nameUpdate
-      pointIn.innerText = pointUpdate
+      nameUpdate.innerHTML = updatedN.value
+      pointUpdate.innerHTML = updatedP.value
     }
-    return 
+    updateBtn.innerHTML = `<i class="fa-solid fa-pen"></i>`
+    delBtn.innerHTML = `<i class="fa-solid fa-trash-can"></i>` 
   })
 
   delBtn.addEventListener("click", () => {
-    return
+    updateBtn.innerHTML = `<i class="fa-solid fa-pen"></i>`
+    delBtn.innerHTML = `<i class="fa-solid fa-trash-can"></i>`  
   })
 })
 
