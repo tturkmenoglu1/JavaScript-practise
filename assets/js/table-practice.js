@@ -3,6 +3,7 @@ const nameIn = document.querySelector("#name")
 const pointIn = document.querySelector("#point")
 const addBtn = document.querySelector("#addBtn")
 const tbody = document.querySelector(".tbody")
+const updateBtn = document.querySelector(".update")
 const delBtn = document.querySelector(".delete")
 const fixBtn = document.querySelector("#fix")
 
@@ -57,11 +58,34 @@ addBtn.addEventListener("click", () => {
     
 })
 
+updateBtn.addEventListener("click", (e) => {
+  const nameUpdate = e.target.closest("tr").querySelector(".nameV")
+  const pointUpdate = e.target.closest("tr").querySelector(".pointV")
+
+  updateBtn.innerHTML = `<i class="fa-solid fa-check"></i>`
+  delBtn.innerHTML = `<i class="fa-solid fa-xmark"></i>`
+
+  nameUpdate.innerHTML = `<input id="updateName" type="text">`
+  pointUpdate.innerHTML = `<input id="updatePoint" type="text">`
+
+  updateBtn.addEventListener("click", () => {
+    if (nameUpdate && pointUpdate) {
+      nameIn.innerText = nameUpdate
+      pointIn.innerText = pointUpdate
+    }
+    return 
+  })
+
+  delBtn.addEventListener("click", () => {
+    return
+  })
+})
+
 
 delBtn.addEventListener("click", (e) => {
   const row = e.target.closest("tr")
 
-  const result = confirm(`Are you sure to delete ${row}?`);
+  const result = confirm(`Are you sure to delete the student?`);
   if (result) {
     row.innerHTML= "";
   }
