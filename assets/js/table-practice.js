@@ -3,7 +3,7 @@ const nameIn = document.querySelector("#name")
 const pointIn = document.querySelector("#point")
 const addBtn = document.querySelector("#addBtn")
 const tbody = document.querySelector(".tbody")
-const delBtn = document.querySelectorAll(".delete")
+const delBtn = document.querySelector(".delete")
 const fixBtn = document.querySelector("#fix")
 
 
@@ -36,34 +36,36 @@ const findAvrg = () => {
 addBtn.addEventListener("click", () => {
     let newName = nameIn.value;
     let newPoint = pointIn.value;
-    let newStudent = `
-    <tr>
-     <th class="idV" scope="row">#</th>
-     <td class="nameV">${newName}</td>
-     <td class="pointV">${newPoint}</td>
-     <td>
-       <div class="edit">
-         <button class="update"><i class="fa-solid fa-pen"></i></button>
-         <button class="delete"><i class="fa-solid fa-trash-can"></i></button>
-       </div>
-     </td>
-    </tr>`
+    if (newName && newPoint) {
+      let newStudent = `
+      <tr>
+       <th class="idV" scope="row">#</th>
+       <td class="nameV">${newName}</td>
+       <td class="pointV">${newPoint}</td>
+       <td>
+         <div class="edit">
+           <button class="update"><i class="fa-solid fa-pen"></i></button>
+           <button class="delete"><i class="fa-solid fa-trash-can"></i></button>
+         </div>
+       </td>
+      </tr>`
+    tbody.innerHTML += newStudent
+    } else {
+      alert("Name or point can not be empty");
+    }
     
-  tbody.innerHTML += newStudent
+    
 })
 
 
-
-/* 
 delBtn.addEventListener("click", (e) => {
-  alert(ok)
   const row = e.target.closest("tr")
 
   const result = confirm(`Are you sure to delete ${row}?`);
   if (result) {
-    row = "";
+    row.innerHTML= "";
   }
-}) */
+})
 
 
 fixBtn.addEventListener("click", () => {

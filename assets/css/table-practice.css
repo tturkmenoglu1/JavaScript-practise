@@ -1,4 +1,48 @@
 
+/* NAME POINT AND ADD BUTTON */
+
+
+div.addNew{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.7rem;
+}
+
+div.addNew input{
+    border-radius: 0.4rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid gray;
+}
+
+div.addNew button#addBtn{
+    border: none;
+    border-radius: 0.4rem;
+    padding: 0.5rem 1rem;
+}
+
+div.addNew input#name{
+    width: 64%;
+}
+
+div.addNew input#point{
+    width: 16%;
+}
+
+div.addNew #addBtn{
+    background-color: rgb(255, 187, 0);
+}
+
+div.addNew #addBtn:hover{
+    background-color: rgb(255, 153, 0);
+    color: white;
+}
+
+
+
+
+/* TABLE */
+
 .table {
     width: 40%;
 }
@@ -32,9 +76,6 @@
 }
 
 
-
-
-
 /* TABLE FOOT */
 
 .table tfoot{
@@ -51,36 +92,16 @@
 
 
 
-
-
-/* NAME POINT AND ADD BUTTON */
-
-
-div.addNew{
-    width: 40%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.7rem;
-}
-
-div.addNew input{
-    border-radius: 0.4rem;
-    padding: 0.5rem 1rem;
-    border: 1px solid gray;
-}
-
-div.addNew button#addBtn{
+button#fix{
     border: none;
-    border-radius: 0.4rem;
+    border-radius: 0.5rem;
     padding: 0.5rem 1rem;
+    background-color: lightgreen;
 }
 
-div.addNew input#name{
-    width: 64%;
-}
-
-div.addNew input#point{
-    width: 16%;
+button#fix:hover{
+    background-color: rgb(0, 184, 0);
+    color: white;
 }
 
 
