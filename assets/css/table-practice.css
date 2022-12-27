@@ -109,7 +109,7 @@ button#fix:hover{
 #updateName, #updatePoint{
     border-radius: 0.5rem;
     outline: none;
-    border: none;
+    border: 1px solid gray;
 }
 
 #updatePoint{
