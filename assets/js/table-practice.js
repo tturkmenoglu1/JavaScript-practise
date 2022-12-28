@@ -4,7 +4,7 @@ const pointIn = document.querySelector("#point")
 const addBtn = document.querySelector("#addBtn")
 const tbody = document.querySelector(".tbody")
 const updateBtn = document.querySelector(".update")
-const delBtn = document.querySelectorAll(".delete")
+const delBtn = document.querySelector(".delete")
 const fixBtn = document.querySelector("#fix")
 
 
