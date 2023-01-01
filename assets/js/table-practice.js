@@ -3,8 +3,7 @@ const nameIn = document.querySelector("#name")
 const pointIn = document.querySelector("#point")
 const addBtn = document.querySelector("#addBtn")
 const tbody = document.querySelector(".tbody")
-const updateBtn = document.querySelector(".update")
-const delBtn = document.querySelector(".delete")
+
 const fixBtn = document.querySelector("#fix")
 
 
@@ -61,6 +60,9 @@ addBtn.addEventListener("click", () => {
 /* updateBtn.addEventListener("click", (e) => { */
 document.querySelectorAll(".update").forEach((button) => {
   button.addEventListener("click", (e) => {
+    const updateBtn = document.querySelector(".update")
+    const delBtn = document.querySelector(".delete")
+
     const nameUpdate = e.target.closest("tr").querySelector(".nameV")
     const pointUpdate = e.target.closest("tr").querySelector(".pointV")
 
