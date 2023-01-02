@@ -63,12 +63,13 @@ document.querySelectorAll(".update").forEach((button) => {
 
     const updateBtn = e.target.closest("tr").querySelector(".update")
     const delBtn = e.target.closest("tr").querySelector(".delete")
-
+/* isim ve puani sectigimiz yer */
     const nameUpdate = e.target.closest("tr").querySelector(".nameV")
     const pointUpdate = e.target.closest("tr").querySelector(".pointV")
-
+/* simge degistimiz yer */
     updateBtn.innerHTML = `<i class="fa-solid fa-check"></i>`
     delBtn.innerHTML = `<i class="fa-solid fa-xmark"></i>`
+
 
     nameUpdate.innerHTML = `<input id="updateName" type="text">`
     pointUpdate.innerHTML = `<input id="updatePoint" type="text">`
