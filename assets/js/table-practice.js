@@ -70,7 +70,6 @@ document.querySelectorAll(".update").forEach((button) => {
     updateBtn.innerHTML = `<i class="fa-solid fa-check"></i>`
     delBtn.innerHTML = `<i class="fa-solid fa-xmark"></i>`
 
-
     nameUpdate.innerHTML = `<input id="updateName" type="text">`
     pointUpdate.innerHTML = `<input id="updatePoint" type="text">`
 
