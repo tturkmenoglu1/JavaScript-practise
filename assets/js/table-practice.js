@@ -57,7 +57,6 @@ addBtn.addEventListener("click", () => {
     
 })
 
-/* updateBtn.addEventListener("click", (e) => { */
 document.querySelectorAll(".update").forEach((button) => {
   button.addEventListener("click", (e) => {
 
@@ -67,6 +66,40 @@ document.querySelectorAll(".update").forEach((button) => {
     const nameUpdate = e.target.closest("tr").querySelector(".nameV")
     const pointUpdate = e.target.closest("tr").querySelector(".pointV")
 /* simge degistimiz yer */
+    updateBtn.innerHTML = `<i class="fa-solid fa-check"></i>`
+    delBtn.innerHTML = `<i class="fa-solid fa-xmark"></i>`
+
+    nameUpdate.dataset.name  = `<input id="updateName" type="text">`
+    pointUpdate.innerHTML = `<input id="updatePoint" type="text">`
+
+    const updatedN = document.querySelector("#updateName")
+    const updatedP = document.querySelector("#updatePoint")
+
+    updateBtn.addEventListener("click", () => {
+      if (nameUpdate && pointUpdate) {
+        nameUpdate.innerHTML = updatedN.value
+        pointUpdate.innerHTML = updatedP.value
+      }
+      updateBtn.innerHTML = `<i class="fa-solid fa-pen"></i>`
+      delBtn.innerHTML = `<i class="fa-solid fa-trash-can"></i>`
+    })
+
+    delBtn.addEventListener("click", () => {
+      updateBtn.innerHTML = `<i class="fa-solid fa-pen"></i>`
+      delBtn.innerHTML = `<i class="fa-solid fa-trash-can"></i>`
+    })
+  })
+})
+/* 
+document.querySelectorAll(".update").forEach((button) => {
+  button.addEventListener("click", (e) => {
+
+    const updateBtn = e.target.closest("tr").querySelector(".update")
+    const delBtn = e.target.closest("tr").querySelector(".delete")
+
+    const nameUpdate = e.target.closest("tr").querySelector(".nameV")
+    const pointUpdate = e.target.closest("tr").querySelector(".pointV")
+
     updateBtn.innerHTML = `<i class="fa-solid fa-check"></i>`
     delBtn.innerHTML = `<i class="fa-solid fa-xmark"></i>`
 
@@ -91,6 +124,7 @@ document.querySelectorAll(".update").forEach((button) => {
     })
   })
 })
+ */
 
 
 /* 
@@ -116,9 +150,5 @@ document.querySelectorAll(".delete").forEach( (button)=> {
 });
 
 
-fixBtn.addEventListener("click", () => {
-  idGen();
-  findAvrg();
-})
 
 

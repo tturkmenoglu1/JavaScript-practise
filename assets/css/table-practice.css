@@ -90,21 +90,6 @@ div.addNew #addBtn:hover{
     text-align: center;
 }
 
-/* ORGANIZE BUTTON */
-
-button#fix{
-    border: none;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
-    background-color: lightgreen;
-}
-
-button#fix:hover{
-    background-color: rgb(0, 184, 0);
-    color: white;
-}
-
-
 /* UPDATE BUTTONS */
 #updateName, #updatePoint{
     border-radius: 0.5rem;
